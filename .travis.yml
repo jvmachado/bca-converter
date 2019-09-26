@@ -13,3 +13,15 @@ script:
   - docker push jvmachado/bca-conversor-client
   - docker push jvmachado/bca-conversor-server
   - docker push jvmachado/bca-conversor-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "bca-conversor"
+  env: "BcaConversor-env"
+  bucket_name: "elasticbeanstalk-us-east-2-238812045852"
+  bucket_path: "bca-conversor"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
