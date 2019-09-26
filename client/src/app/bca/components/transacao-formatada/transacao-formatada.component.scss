@@ -1,0 +1,25 @@
+.transacaoFormatada {
+  .mat-card {
+    text-align: left;
+    .item {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      .key {
+        color: #9e9999;
+        width: 50%;
+      }
+      .value {
+        width: 30%;
+        color: #4d4f5c;
+      }
+
+      &.corpo {
+        margin-top: 10px;
+        .value {
+          color: red;
+        }
+      }
+    }
+  }
+}

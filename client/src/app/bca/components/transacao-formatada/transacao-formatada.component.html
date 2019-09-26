@@ -1,0 +1,52 @@
+<div class="transacaoFormatada" *ngIf="transacaoConvertida">
+    <mat-card>
+        <div class="item">
+            <label class="key">Número sequencial</label>
+            <label class="value">{{transacaoConvertida.nroSequencialTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Código</label>
+            <label class="value">{{transacaoConvertida.codTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Código da modalidade de processamento</label>
+            <label class="value">{{transacaoConvertida.codModalidadeProcessamento}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Código de identificação do cliente</label>
+            <label class="value">{{transacaoConvertida.codIdCliente}}</label>
+        </div>
+        <div class="item">
+            <label class="key">UF de origem</label>
+            <label class="value">{{transacaoConvertida.UfOrigemTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">UF de origem da transmissão</label>
+            <label class="value">{{transacaoConvertida.ufOrigemTrasmissao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">UF de destino da transmissão</label>
+            <label class="value">{{transacaoConvertida.ufDestinoTrasmissao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Tipo de condicionalidade</label>
+            <label class="value">{{transacaoConvertida.tpCondicionalidadeTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Tamanho</label>
+            <label class="value">{{transacaoConvertida.tamanhoTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Código de retorno</label>
+            <label class="value">{{transacaoConvertida.codRetornoTransacao}}</label>
+        </div>
+        <div class="item">
+            <label class="key">Dia Juliano</label>
+            <label class="value">{{transacaoConvertida.diaJuliano}}</label>
+        </div>
+        <div class="item corpo" *ngIf="transacaoConvertida.corpo">
+            <label class="key">Corpo</label>
+            <label class="value">{{transacaoConvertida.corpo}}</label>
+        </div>
+    </mat-card>
+</div>

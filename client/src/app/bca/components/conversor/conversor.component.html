@@ -1,0 +1,12 @@
+<div class="conversor">
+  <h1>CONVERSOR BCA</h1>
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit();">
+    <mat-form-field class="full-width-field">
+      <mat-label>Digite ou cole uma Resposta do BCA para ser formatada </mat-label>
+      <input matInput placeholder="Transação" formControlName="transacao">
+      <mat-icon matSuffix (click)="onSubmit()">done</mat-icon>
+    </mat-form-field>
+  </form>
+
+  <app-transacao-formatada [transacaoConvertida]="transacaoConvertida"></app-transacao-formatada>
+</div>

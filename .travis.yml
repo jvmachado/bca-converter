@@ -1,0 +1,15 @@
+sudo: required
+language: generic
+services:
+  - docker
+
+script:
+  - docker build -t jvmachado/bca-conversor-client ./client
+  - docker build -t jvmachado/bca-conversor-server ./server 
+  - docker build -t jvmachado/bca-conversor-nginx ./nginx 
+  #Login docker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  #Push images
+  - docker push jvmachado/bca-conversor-client
+  - docker push jvmachado/bca-conversor-server
+  - docker push jvmachado/bca-conversor-nginx
